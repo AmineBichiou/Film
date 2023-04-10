@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="template">
+
+<link rel="stylesheet" type="text/css"
+      href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+<head>
+    <meta charset="utf-8">
+    <title>Liste des Films</title>
+</head>
+<body>
+<div th:replace="template"></div>
+<div class="container mt-5" >
+    <div class="card-body">
+        <form action="saveFilm" method="post">
+            <div class="form-group">
+                <label class="control-label">Nom Film :</label>
+                <input type="text" name="nomFilm" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Rate Film :</label>
+                <input type="text" name="rateFilm" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">date création :</label>
+                <input type="date" name="date" class="form-control"/>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary" >Ajouter</button>
+            </div>
+        </form>
+    </div>
+    <br/>
+    <br/>
+</div>
+</body>
+</html>
